@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -140,3 +141,147 @@ Website by <a href="mailto:soulesjms@gmail.com">Jonathan Soules</a>
 
 </body>
 </html>
+=======
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GamerSoul Software</title>
+<head>
+<script src="Java Library.js"></script>
+</head> 
+<script> 
+
+ 
+$(document).ready(function(){
+  $("#Nav").mouseenter(function(){
+	$("#Bar").stop()
+    var div=$("#Bar");
+    div.animate({height:'250px',},500);
+  });  
+  $("#Bar").mouseleave(function(){
+    $("#Bar").stop()
+    var div=$("#Bar");
+	div.animate({height:'110px'}, 500)
+  });
+});
+$(document).ready(function(){
+	$("#Nav").mouseenter(function(){
+		$("#Nav").stop()
+		var div=$("#Nav");
+		div.animate({opacity:'1', width:'250px'})
+	});
+	$("#Nav").mouseleave(function(){
+		$("#Nav").stop()
+		var div=$("#Nav");
+		div.animate({opacity:'0.5', width:'200px'})
+	});
+});
+
+</script>
+ 
+<style type="text/css"> 
+a:link {
+	color: #FFF;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+	color: #999;
+}
+a:visited {
+	color: #FFF;
+	text-decoration: none;
+}
+#Nav
+{
+	float: right;
+	position: relative;
+	padding: 25px;
+	text-align: Left;
+	background-color: #333;
+	border:solid 1px #CCC;
+	width: 200px;
+	height: 250px;
+	left: -75px;
+	line-height: 200%;
+	color: #ffffff;
+	opacity: 0.5;
+	font-family: Arial, Helvetica, sans-serif;
+	z-index: 1;
+}
+
+#Bar
+{
+	left: 20px;
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	height: 110px;
+	background-image: url("binding_dark.png");
+	background-repeat: repeat; 
+	z-index: -1;
+}
+
+#logo
+{
+	position:relative;
+	padding-top:25px;
+	z-index: 0;
+}
+
+
+#static
+{
+	padding-top: 20px;
+	padding-left: 20 px;
+	left: 20px;
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	height: 30px;
+	background-color:#000;
+	background-repeat: repeat; 
+	z-index: 1;
+}
+body {
+	color:#CCCCCC;
+	background-image:url(bassinspace.jpg);
+	background-repeat:no-repeat;
+	background-size:cover;
+	}
+
+#Area {
+	position: fixed;
+	width: 500px;
+	background-image: url("binding_dark.png");
+	background-repeat: repeat; 
+	z-index: -1;
+}
+
+</style>
+
+<body>
+<div id="Area">
+<h1>Web Design</h1>
+</div>
+
+
+<div id="Bar">
+  <div id="Nav"> 
+		<a href="Home Page.html">Home</a><br />
+        <a href="Music.html">Music</a><br />
+        <a href="WebDesign.html">Web Design</a><br />
+        <a href="MyInterests.html">My Interests</a><br />
+        <a href="Resume.html">Résumé</a><br />
+  </div>
+	<div id="logo"><a href="untitled-4.html"><img src="GamerSoul2.png" width="960" height="180" /></a></div>
+</div>
+<div id="static">
+© 2013 Gamersoul Software. All rights reserved.
+Website by <a href="mailto:soulesjms@gmail.com">Jonathan Soules</a>
+</div>
+
+
+</body>
+</html>
+>>>>>>> fc7ecb8f883aca8f6942b1bf924a8647a2034849
