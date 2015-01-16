@@ -1,0 +1,78 @@
+a:link {
+	color: #FFF;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+	color: #999;
+}
+a:visited {
+	color: #FFF;
+	text-decoration: none;
+}
+#Nav
+{
+	float: right;
+	position: relative;
+	padding: 25px;
+	text-align: Left;
+	background-color: #333;
+	border:solid 1px #CCC;
+	width: 200px;
+	height: 250px;
+	left: -75px;
+	line-height: 200%;
+	color: #ffffff;
+	opacity: 0.5;
+	font-family: Arial, Helvetica, sans-serif;
+	z-index: 1;
+}
+
+#Bar
+{
+	left: 20px;
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	height: 110px;
+	background-image: url("binding_dark.png");
+	background-repeat: repeat; 
+	z-index: -1;
+}
+
+#logo
+{
+	position:relative;
+	padding-top:25px;
+	z-index: 0;
+}
+
+
+#static
+{
+	padding-top: 20px;
+	padding-left: 20 px;
+	left: 20px;
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	height: 30px;
+	background-color:#000;
+	background-repeat: repeat; 
+	z-index: 1;
+}
+body {
+	color:#999;
+	background-image:url(bassinspace.jpg);
+	background-repeat:no-repeat;
+	background-size:cover;
+	}
+
+#Area {
+	position: fixed;
+	padding:20px;
+	width: 500px;
+	background-image: url("binding_dark.png");
+	background-repeat: repeat; 
+	z-index: -1;
+}
