@@ -78,7 +78,7 @@ function writeToFile(txt) {
 	url = url + "&gpa1=" + txt[6] + "&gpa2=" + txt[7] + "&gpa3=" + txt[8] + "&gpa4=" + txt[9];
 	url =  url +"&some1=" + txt[10] + "&some2=" + txt[11] + "&some3=" + txt[12] + "&some4=" + txt[13];	
 
-	//document.getElementById("displayArea").innerHTML = url;	
+	document.getElementById("displayArea").innerHTML = url;	
 	xmlhttp.open("GET", url, true);
 	xmlhttp.send();
 }
@@ -97,6 +97,7 @@ function writeToFile(txt) {
 <div id="Area">
 <h1>PHP Survey</h1>
 <div id="displayArea" style="float:left">Hi</div>
+<div id="testArea" >TestArea</div>
 		<form action="survey.php" id="myForm" style="float:left">
         	<br />
 			
