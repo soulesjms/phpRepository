@@ -48,10 +48,10 @@ function displayStats() {
 			poll += "3.0-3.5: " + txt[8] + "<br />";
 			poll += "3.5-4.0: " + txt[9] + "<br /><br />";
 			poll += "Selection<br />";
-			poll += "something1: " + txt[10] + "<br />";
-			poll += "something2: "+ txt[11] + "<br />";
-			poll += "something3: " + txt[12] + "<br />";
-			poll += "something4: " + txt[13] + "<br />";
+			poll += "Pizza: " + txt[10] + "<br />";
+			poll += "Pizza: "+ txt[11] + "<br />";
+			poll += "Steak: " + txt[12] + "<br />";
+			poll += "Burger: " + txt[13] + "<br />";
 			
 			document.getElementById("displayArea").innerHTML = poll;
 			writeToFile(txt);
@@ -78,7 +78,7 @@ function writeToFile(txt) {
 	url = url + "&gpa1=" + txt[6] + "&gpa2=" + txt[7] + "&gpa3=" + txt[8] + "&gpa4=" + txt[9];
 	url =  url +"&some1=" + txt[10] + "&some2=" + txt[11] + "&some3=" + txt[12] + "&some4=" + txt[13];	
 
-	document.getElementById("testArea").innerHTML = url;	
+	//document.getElementById("testArea").innerHTML = url;	
 	xmlhttp.open("GET", url, true);
 	xmlhttp.send();
 }
@@ -117,11 +117,11 @@ function writeToFile(txt) {
 			<input type="radio" name="GPA" value="3.5-4.0">3.5-4.0</input><br />
 			<br />
 			
-            Something Else<br />
-			<input type="radio" name="something" value="something 1">something 1</input><br />
-			<input type="radio" name="something" value="something2">something 2</input><br />
-			<input type="radio" name="something" value="something3">something 3</input><br />
-			<input type="radio" name="something" value="something4">something 4</input><br />
+            Favorite Food:<br />
+			<input type="radio" name="something" value="something 1">Pizza</input><br />
+			<input type="radio" name="something" value="something2">Spaghetti</input><br />
+			<input type="radio" name="something" value="something3">Steak</input><br />
+			<input type="radio" name="something" value="something4">Burger</input><br />
             <br />
             <input type="button" onclick="displayStats()" value="Vote!"/>
 		</form>
