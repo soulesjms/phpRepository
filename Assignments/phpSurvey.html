@@ -71,7 +71,7 @@ function writeToFile(txt) {
 		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
 	}
 	var url = "";
-	url += "http://php-soulesjms.rhcloud.com/Assignments/?";
+	url += "http://php-soulesjms.rhcloud.com/Assignments/survey.php?";
 	
 	url = url + "male=" + txt[0] + "&female=" + txt[1];
 	url = url + "&CS=" + txt[2] + "&web=" + txt[3] + "&CIT=" + txt[4] + "&CE=" + txt[5];
@@ -96,7 +96,7 @@ function writeToFile(txt) {
 <body>
 <div id="Area">
 <h1>PHP Survey</h1>
-<div id="displayArea" style="float:right">Hi</div>
+<div id="displayArea" style="float:left">Hi</div>
 		<form action="survey.php" id="myForm" style="float:left">
         	<br />
 			
