@@ -71,7 +71,7 @@ function writeToFile(txt) {
 		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
 	}
 	var url = "";
-	url += "http://localhost/survey.php?";
+	url += "http://php-soulesjms.rhcloud.com/Assignments/?";
 	
 	url = url + "male=" + txt[0] + "&female=" + txt[1];
 	url = url + "&CS=" + txt[2] + "&web=" + txt[3] + "&CIT=" + txt[4] + "&CE=" + txt[5];
@@ -132,18 +132,5 @@ function writeToFile(txt) {
 </body>
 
 
-<div id="Bar">
-  <div id="Nav"> 
-		<a href="index.html">Home</a><br />
-        <a href="Music.html">Music</a><br />
-        <a href="WebDesign.html">Web Design</a><br />
-        <a href="Animation.html">Animation</a><br />
-        <a href="Resume.html">Resume<br />
-  </div>
-	<div id="logo"><a href="../index.html"><img src="../Logo2.png" width="1440" height="487"/></a></div>
-</div>
-<div id="static">
-Copyright 2013 Gamersoul Software. All rights reserved.
-Website by <a href="mailto:soulesjms@gmail.com">Mark Soules</a>
-</div>
+
 </html>
