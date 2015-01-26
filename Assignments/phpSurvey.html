@@ -7,7 +7,7 @@
 <!--External scripts and styles-->
 <script src="Java Library.js"></script>
 <script src="MenuBar.js"></script>
-<link rel="stylesheet" type="text/css" href="homeStyle.css">
+<!--<link rel="stylesheet" type="text/css" href="homeStyle.css">-->
 <script>
 
 function displayStats() {
@@ -96,11 +96,8 @@ function writeToFile(txt) {
 <body>
 <div id="Area">
 <h1>PHP Survey</h1>
-<div id="displayArea">Hi</div>
-<div id="testArea" >TestArea</div>
-		<form action="survey.php" id="myForm" style="float:left">
-        	<br />
-			
+	<div style="float:left">
+		<form action="survey.php" id="myForm" >			
             Gender<br />
 			<input type="radio" name="gender" value="Male">Male</input><br />
 			<input type="radio" name="gender" value="Female">Female</input><br />
@@ -128,6 +125,8 @@ function writeToFile(txt) {
             <br />
             <input type="button" onclick="displayStats()" value="Vote!"/>
 		</form>
+        </div>
+        <div id="displayArea" style="float:left"></div>
 </div>
 </body>
 
