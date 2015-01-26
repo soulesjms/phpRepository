@@ -34,20 +34,20 @@ function displayStats() {
 			var i = 0;
 			var poll = "";
 			poll += "<div id='pollStats'>";
-			poll += "<h3>Gender</h3>";
+			poll += "Gender<br />";
 			poll += "Males: " + txt[0] + "<br />";
-			poll += "Females: " + txt[1] + "<br />";
-			poll += "<h3>Major</h3>";
+			poll += "Females: " + txt[1] + "<br /><br />";
+			poll += "Major<br />";
 			poll += "CS: " + txt[2] + "<br />";
 			poll += "Web Dev: " + txt[3] + "<br />";
 			poll += "CIT: " + txt[4] + "<br />";
-			poll += "CompE: " + txt[5] + "<br />";
-			poll += "<h3>GPA</h3>";
+			poll += "CompE: " + txt[5] + "<br /><br />";
+			poll += "GPA<br />";
 			poll += "0-2.0: " + txt[6] + "<br />";
 			poll += "2.0-3.0: " + txt[7] + "<br />";
 			poll += "3.0-3.5: " + txt[8] + "<br />";
-			poll += "3.5-4.0: " + txt[9] + "<br />";
-			poll += "<h3>Selection</h3>";
+			poll += "3.5-4.0: " + txt[9] + "<br /><br />";
+			poll += "Selection<br />";
 			poll += "something1: " + txt[10] + "<br />";
 			poll += "something2: "+ txt[11] + "<br />";
 			poll += "something3: " + txt[12] + "<br />";
@@ -78,7 +78,7 @@ function writeToFile(txt) {
 	url = url + "&gpa1=" + txt[6] + "&gpa2=" + txt[7] + "&gpa3=" + txt[8] + "&gpa4=" + txt[9];
 	url =  url +"&some1=" + txt[10] + "&some2=" + txt[11] + "&some3=" + txt[12] + "&some4=" + txt[13];	
 
-	//document.getElementById("displayArea").innerHTML = url;	
+	document.getElementById("testArea").innerHTML = url;	
 	xmlhttp.open("GET", url, true);
 	xmlhttp.send();
 }
@@ -127,6 +127,7 @@ function writeToFile(txt) {
 		</form>
         </div>
         <div id="displayArea" style="float:left"></div>
+        <div id="testArea"></div>
 </div>
 </body>
 
