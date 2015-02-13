@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GS Software & Animation</title>
+
+<head>
+<!--External scripts and styles-->
+<script src="../Java Library.js"></script>
+<script src="../MenuBar.js"></script>
+<script>
+function login() {
+		
+}
+
+function createAccount() {
+	var xmlhttp;
+	if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+		xmlhttp=new XMLHttpRequest();
+	}
+	else {// code for IE6, IE5
+		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	
+	var x = document.getElementById("myForm");
+	var url = "";
+	var gender = "";
+	if (x.elements[0].checked) {
+		gender = x.elements[0].value;
+	}
+	else {
+		gender = x.elements[1].value;
+	}
+	
+	var firstName = x.elements[2].value;
+	var lastName = x.elements[3].value;
+	var major = x.elements[4].value;
+	var apartment = x.elements[5].value;
+	var username = x.elements[7].value;
+	var password = x.elements[8].value;
+	
+	var y = document.getElementById("mySelect").selectedIndex;
+	var z = document.getElementById("mySelect").options;
+	var semeseter = "";
+	semester = z[y].text;
+	
+	url += "http://localhost/login.php?";
+	
+	url = url + "gender=" + gender + "&firstName=" + firstName + "&lastName=" + lastName + "&major=" + major + "&apartment=" + apartment;
+	url = url + "&semester=" + "1st" + "&username=" + username + "&password=" + password;
+	
+	
+	xmlhttp.open("GET", url, true);
+	xmlhttp.send();
+	
+	document.getElementById("displayArea").innerHTML = url;	
+}
+	
+</script>
+
+<link rel="stylesheet" type="text/css" href="../homeStyle.css">
+
+<!--Favicon-->
+<link rel="icon" 
+      type="image/bmp" 
+      href="../GamerSoulLogo1.bmp">
+</head> 
+
+
+<body>
+<div id="Area">
+	<h2>Student Directory Project</h2>
+    <a href="http://web.byui.edu/directory/students/">Real Directory</a><br />
+    <form id="myForm" >
+    	Create a new account:<br />
+        Gender:<br />
+			<input type="radio" name="gender" value="Male">Male</input>
+			<input type="radio" name="gender" value="Female">Female</input><br />
+		<br />
+        
+    	<input type="text" placeholder="First Name" />* <br />
+        <input type="text" placeholder="Last Name" />* <br />
+        <input type="text" placeholder="Major" /> <br />
+        <input type="text" placeholder="Apartment Complex" /><br /><br />
+
+        Semester: <br />
+        <select id="mySelect">
+            <option value="1st">1st</option>
+            <option value="2nd">2nd</option>
+            <option value="3rd">3rd</option>
+            <option value="4th">4th</option>
+            <option value="5th">5th</option>
+            <option value="6th">6th</option>
+            <option value="7th">7th</option>
+            <option value="8th">8th</option>
+            <option value="9th">9th</option>
+            <option value="10th">10th</option>
+            <option value="too many">too many</option>
+        </select><br /><br />
+
+		<input type="text" placeholder="Username" />*<br />
+		<input type="password" placeholder="Password" />*<br />
+        <!--<input type="password" placeholder="Confirm Password" />*<br />-->
+
+    <br /><br />
+    <input type="button" onclick="createAccount()" value="Create Account" />
+    <br />
+	REQUIRED *
+    </form>
+    <br /><br />
+    -- OR --
+    <br /><br />
+    <form>
+    	Login:
+    	<input type="text" placeholder="username"/>
+        <input type="password" placeholder="password"/>
+        <input type="button" onclick="login()" value="Log in" /><br />
+    </form>
+<div id="displayArea"></div>
+</div>
+<div id="Bar">
+  <div id="Nav"> 
+		<a href="../index.html">Home</a>
+        <a href="../Music.html">Music</a>
+        <a href="../WebDesign.html">Web Design</a>
+        <a href="../Animation.html">Animation</a>
+        <a href="../Resume.html">Resume</a>
+  </div>
+	<div id="logo"><a href="../index.html"><img src="../Logo2.png" width="834" height="182"/></a></div>
+</div>
+<div id="static">
+Copyright 2013 Gamersoul Software. All rights reserved.
+Website by <a href="mailto:soulesjms@gmail.com">Mark Soules</a>
+</div>
+</body>
+</html>
