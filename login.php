@@ -24,7 +24,7 @@ try
 {
    $hostuser = "php";
    $hostpassword = "php-pass";
-   $db = new PDO("mysql:host=localhost;dbname=directory", $hostuser, $hostpassword);
+   $db = new PDO("mysql:host=$dbHost;dbname=directory", $hostuser, $hostpassword);
 }
 catch (PDOException $ex) {
 	echo "Error!: " . $ex->getMessage();
