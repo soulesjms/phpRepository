@@ -22,7 +22,7 @@ $password = $_GET['password'];
 
 try
 {
-   $hostuser = "php";
+   $hostuser = "adminlytYGba";
    $hostpassword = "php-pass";
    $db = new PDO("mysql:host=$dbHost;dbname=directory", $hostuser, $hostpassword);
 }
