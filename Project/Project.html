@@ -2,107 +2,21 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>GS Software & Animation</title>
-
 <head>
-<!--External scripts and styles-->
-<script src="../Java Library.js"></script>
-<script src="../MenuBar.js"></script>
-<script>
-function createAccount() {
-	var xmlhttp;
-	if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
-		xmlhttp=new XMLHttpRequest();
-	}
-	else {// code for IE6, IE5
-		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-	}
-	
-	var x = document.getElementById("myForm");
-	
-	var firstName = x.elements[0].value;
-	var lastName = x.elements[1].value;
-	var major = x.elements[2].value;
-	var lastName = x.elements[3].value;
-	
-	var url;
-	
-	url = url + "male=" + txt[0] + "&female=" + txt[1];
-	url = url + "&CS=" + txt[2] + "&web=" + txt[3] + "&CIT=" + txt[4] + "&CE=" + txt[5];
-	url = url + "&gpa1=" + txt[6] + "&gpa2=" + txt[7] + "&gpa3=" + txt[8] + "&gpa4=" + txt[9];
-	url =  url +"&some1=" + txt[10] + "&some2=" + txt[11] + "&some3=" + txt[12] + "&some4=" + txt[13];	
-	
-	var url = "";
-	url += "http://php-soulesjms.rhcloud.com/Assignments/survey.php?";
-
-	xmlhttp.open("GET", url, true);
-	xmlhttp.send();
-}
-
-</script>
-
-<link rel="stylesheet" type="text/css" href="../homeStyle.css">
-
-<!--Favicon-->
-<link rel="icon" 
-      type="image/bmp" 
-      href="../GamerSoulLogo1.bmp">
-</head> 
-
-
+</head>
 <body>
-<div id="Area">
-	<h2>Student Directory Project</h2>
-    <a href="http://web.byui.edu/directory/students/">Real Directory</a><br />
-    <form id="myForm" >
-    	Create a new account:<br />
-        Gender<br />
-			<input type="radio" name="gender" value="Male">Male</input><br />
-			<input type="radio" name="gender" value="Female">Female</input><br />
-		<br />
-    	<input type="text" placeholder="First Name" /> <br />
-        <input type="text" placeholder="Last Name" /> <br />
-        <input type="text" placeholder="Major" /> <br />
-        <input type="text" placeholder="Apartment Complex" /><br />
-        Semester: <br />
-        <select>
-            <option value="1st">1st</option>
-            <option value="2nd">2nd</option>
-            <option value="3rd">3rd</option>
-            <option value="4th">4th</option>
-            <option value="5th">5th</option>
-            <option value="6th">6th</option>
-            <option value="7th">7th</option>
-            <option value="8th">8th</option>
-            <option value="9th">9th</option>
-            <option value="10th">10th</option>
-            <option value="too many">too many</option>
-        </select>
-    <br /><br />
-    <input type="button" onclick="createAccount()" value="Create Account" />
+	<h1>BYUI Student Directory</h1>
+    Login:<br />
+	<form action="Project.php">
+    	<input type="text" placeholder="Username" />
+        <input type="password" placeholder="Password" />
+    </form><p>
+    
+    <a href="CreateNewAcc.html">Create New Account</a><br />
+    <form action="ShowUsers.php">
+    	<input type="submit" value="Show Users"/>
     </form>
-    <br /><br />
-    -- OR --
-    <br /><br />
-    <form>
-    	Login:
-    	<input type="text" placeholder="username"/>
-        <input type="password" placeholder="password"/><br />
-    </form>
-
-</div>
-<div id="Bar">
-  <div id="Nav"> 
-		<a href="../index.html">Home</a>
-        <a href="../Music.html">Music</a>
-        <a href="../WebDesign.html">Web Design</a>
-        <a href="../Animation.html">Animation</a>
-        <a href="../Resume.html">Resume</a>
-  </div>
-	<div id="logo"><a href="../index.html"><img src="../Logo2.png" width="834" height="182"/></a></div>
-</div>
-<div id="static">
-Copyright 2013 Gamersoul Software. All rights reserved.
-Website by <a href="mailto:soulesjms@gmail.com">Mark Soules</a>
-</div>
+<br />
+<br />
 </body>
 </html>

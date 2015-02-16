@@ -8,9 +8,6 @@
 <script src="../Java Library.js"></script>
 <script src="../MenuBar.js"></script>
 <script>
-function login() {
-		
-}
 
 function createAccount() {
 	var xmlhttp;
@@ -54,7 +51,7 @@ function createAccount() {
 	
 	document.getElementById("displayArea").innerHTML = url;	
 }
-	
+
 </script>
 
 <link rel="stylesheet" type="text/css" href="../homeStyle.css">
@@ -65,6 +62,24 @@ function createAccount() {
       href="../GamerSoulLogo1.bmp">
 </head> 
 
+<?php
+    try
+    {
+       $hostuser = "php";
+       $hostpassword = "php-pass";
+       $db = new PDO("mysql:host=localhost;dbname=scriptures", $hostuser, $hostpassword);
+    }
+    catch (PDOException $ex) {
+        echo "Error!: " . $ex->getMessage();
+        die();	
+    }
+    $sql = "SELECT * FROM topics;";
+    
+    $topics = $db->query($sql);
+    foreach($topics AS $topic) {
+        echo "<input type='checkbox' name='topic[]' value='".$topic['id']."'/> <label>".$topic['name']."</label><br />";
+    }
+?>
 
 <body>
 <div id="Area">
