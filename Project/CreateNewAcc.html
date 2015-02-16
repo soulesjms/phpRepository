@@ -8,7 +8,7 @@
 
 <body>
 	<h2>Student Directory Project</h2>
-    <form id="myForm" action="CreateAcc.php">
+    <form id="myForm" action="CreateAcc.php" method="post">
     	Create a new account:<br />
         <input type="text" placeholder="username" name="username"/><br />
         <input type="password" placeholder="password" name="password"/><br />
@@ -16,7 +16,7 @@
         <input type="text" placeholder="Last Name" name="lastName"/><br />
         <input type="text" placeholder="Major" name="major"/><br />
         <input type="text" placeholder="Apartment Complex" name="apartment"/><br />
-        <select name="semester">
+        <select name="semester[]">
             <option value="1st">1st</option>
             <option value="2nd">2nd</option>
             <option value="3rd">3rd</option>
